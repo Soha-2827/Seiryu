@@ -1,12 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <link rel="menu" href="menu.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seiryu Menu</title>
+  <link rel="stylesheet" href="menu.css">
 </head>
 <body>
-    <h1>Unser Menu</h1>
+
+<header>
+  <div class="logo">SEIRYU</div>
+  <div class="burger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</header>
+
+<nav id="menu">
+  <a href="#">Home</a>
+  <a href="#">Sushi</a>
+  <a href="#">Speisen</a>
+  <a href="#">Getränke</a>
+</nav>
+
+<!-- Hintergrund -->
+<div class="background"></div>
+
+<main>
+  <h1>UNSER MENÜ</h1>
+
+  <section class="menu-grid">
+
+    <div class="menu-card" onclick="alert('Sushi')">
+      <img src="sushi.avif">
+      <span>SUSHI</span>
+    </div>
+
+    <div class="menu-card" onclick="alert('Speisen')">
+      <img src="vorspeise.png">
+      <span>VORSPEISEN</span>
+    </div>
+
+    <div class="menu-card" onclick="alert('Getränke')">
+      <img src="Getranke.jpg">
+      <span>GETRÄNKE</span>
+    </div>
+
+  </section>
+</main>
+
+<div class="menu-button-wrapper">
+  <a href="speisekarte.html" class="menu-button">SPEISEKARTE</a>
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("active");
+}
+</script>
+
 </body>
 </html>
